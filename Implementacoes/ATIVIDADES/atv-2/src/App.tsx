@@ -1,22 +1,31 @@
 import './App.css'
 
-import World from './components/Qst3_Qst4/World'
-import Arena from './components/Qst1_Qst2/Arena'
+import Arena from './components/Qst3_Qst4_Qst5/Arena'
+import Hero from './components/Qst3_Qst4_Qst5/Hero'
+import Enemy from './components/Qst3_Qst4_Qst5/Enemy'
+import World from './components/Qst3_Qst4_Qst5/World'
 
-import Casa from './components/Qst3_Qst4/Casa'
-import Personagem from './components/Qst3_Qst4/Personagem'
+import ImagePaths from './components/Qst3_Qst4_Qst5/ImagePaths'
 
 function App() {
   return (
     <div className="App">
-      <Casa casa="Stark">
-        <Personagem nome="Arya"/>
-        <Personagem nome="Ned"/>
-      </Casa>
+      <World>
+        <Arena arena="Tokio Dome- Underground Arena">
+          <Hero name='Baki' imagePath={ImagePaths[0]} />
+          <Enemy name='Yujiro' imagePath={ImagePaths[1]}></Enemy>
+        </Arena>
 
-      <Casa casa="Baratheon">
-        <Personagem nome="Theon" casa="baratheon"/>
-      </Casa>
+        <Arena arena="Vila da Folha">
+          <Hero name='Narutinho' imagePath={ImagePaths[2]} />
+          <Enemy name='Sasuke' imagePath={ImagePaths[3]}></Enemy>
+        </Arena>
+
+        <Arena arena="Arena Castelão">
+          <Hero name='Fortaleza' imagePath={ImagePaths[4]} />
+          <Enemy name='Ceará' imagePath={ImagePaths[5]}></Enemy>
+        </Arena>
+      </World>
 
     </div>
   )
