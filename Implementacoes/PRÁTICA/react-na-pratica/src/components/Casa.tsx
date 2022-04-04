@@ -1,9 +1,11 @@
 import Personagem from "./Personagem";
+import React from "react";
 
-export default (props:any) => {
+export default (props: any) => {
     return (
         <div>
-            <h1> {props.children} </h1>
+            {props.children}
         </div>
     )
+
 }

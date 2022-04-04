@@ -3,8 +3,7 @@ interface PersonagemProps{
     casa: string
 }
 
-
-export default (props: PersonagemProps) => {
+export default (props: any) => {
     return (
         <div>
             {props.nome} da casa {props.casa}
