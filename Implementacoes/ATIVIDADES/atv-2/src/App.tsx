@@ -1,9 +1,7 @@
-import './App.css'
-
-import Arena from './components/Qst3_Qst4_Qst5/Arena'
-import Hero from './components/Qst3_Qst4_Qst5/Hero'
-import Enemy from './components/Qst3_Qst4_Qst5/Enemy'
-import World from './components/Qst3_Qst4_Qst5/World'
+import Arena from './components/Qst3_Qst4_Qst5/Arena/Arena'
+import Hero from './components/Qst3_Qst4_Qst5/Hero/Hero'
+import Enemy from './components/Qst3_Qst4_Qst5/Enemy/Enemy'
+import World from './components/Qst3_Qst4_Qst5/World/World'
 
 import ImagePaths from './components/Qst3_Qst4_Qst5/ImagePaths'
 

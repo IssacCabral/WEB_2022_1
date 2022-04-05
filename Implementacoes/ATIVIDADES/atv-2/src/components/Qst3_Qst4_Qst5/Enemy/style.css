@@ -1,0 +1,6 @@
+@import url('../shared/card-base.css');
+
+.enemy {
+    width: 100%;
+    background-color: #a2f2f2;
+}

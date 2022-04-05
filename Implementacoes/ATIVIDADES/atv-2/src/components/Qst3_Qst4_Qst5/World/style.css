@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.world {
+    width: 100%;
+}
+
+.container {
+    background-color: rgb(121, 121, 116);
+}

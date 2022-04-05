@@ -1,0 +1,6 @@
+@import url('../shared/card-base.css');
+
+.hero {
+    width: 100%;
+    background-color: #ff8e7a;
+}

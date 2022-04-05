@@ -1,0 +1,30 @@
+.arena {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #611755;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    border-radius: 4rem;
+    padding: .5rem;
+}
+
+.arena h2 {
+    font-size: 1.4rem;
+    color: aliceblue;
+    margin-bottom: 1rem;
+}
+
+.fight {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fight-symbol {
+    width: 150px;
+}
