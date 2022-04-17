@@ -3,7 +3,6 @@ interface ICharacter{
     house?: string
 }
 
-
 const Character = (props: ICharacter) => {
     return (
         <div>

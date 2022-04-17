@@ -7,6 +7,7 @@ const Enemy: FC<HeroEnemyProps> = (props) => {
         <div className="card-base enemy">
             <h3>Nome do inimigo: {props.name}</h3>
             <img src={props.imagePath}/>
+            <h4>lutando na arena {props.arena}</h4>
         </div>
     )
 }
