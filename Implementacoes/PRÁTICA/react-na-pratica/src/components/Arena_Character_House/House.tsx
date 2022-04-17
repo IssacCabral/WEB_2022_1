@@ -2,10 +2,6 @@ import React, { ReactElement } from "react"
 
 import Character from "./Character"
 
-// interface IHouse{
-//     children: React.ReactNode
-// }
-
 interface IHouse{
     houseName: string
     children?: React.ReactNode
