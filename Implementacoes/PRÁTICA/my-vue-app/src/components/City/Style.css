@@ -1,0 +1,27 @@
+.botao{
+    background-color: chartreuse;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    width: 10%;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-right: 8px;
+}
+
+.botao-zerar{
+    background-color: #444;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    width: 10%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+}
