@@ -1,7 +1,7 @@
 const Edit = () => {
     return (
         <div>
-            <p>Edit Component</p>
+            <p>Edit component</p>
         </div>
     )
 }

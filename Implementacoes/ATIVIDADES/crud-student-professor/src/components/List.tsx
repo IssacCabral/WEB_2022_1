@@ -1,7 +1,7 @@
 const List = () => {
     return (
         <div>
-            <p>List Component</p>
+            <p>List component</p>
         </div>
     )
 }

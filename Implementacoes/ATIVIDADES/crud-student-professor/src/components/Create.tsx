@@ -1,7 +1,7 @@
 const Create = () => {
     return (
         <div>
-            <p>Create Component</p>
+            <p>Create component</p>
         </div>
     )
 }
