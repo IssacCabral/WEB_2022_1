@@ -1,4 +1,4 @@
-const List = () => {
+const ListStudent = () => {
     return (
         <div>
             <p>List component</p>
@@ -6,4 +6,4 @@ const List = () => {
     )
 }
 
-export default List
+export default ListStudent

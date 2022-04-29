@@ -1,4 +1,4 @@
-const Edit = () => {
+const EditStudent = () => {
     return (
         <div>
             <p>Edit component</p>
@@ -6,4 +6,4 @@ const Edit = () => {
     )
 }
 
-export default Edit
+export default EditStudent

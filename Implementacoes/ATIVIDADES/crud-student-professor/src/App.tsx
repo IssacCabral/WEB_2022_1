@@ -3,10 +3,10 @@ import { Component } from 'react'
 import { Routes, Route, Link} from 'react-router-dom'
 import './App.css'
 
-import Create from './components/Create';
-import Edit from './components/Edit';
-import List from './components/List';
-import Home from './components/Home';
+import CreateStudent from './components/Student/CreateStudent'
+import EditStudent from './components/Student/EditStudent'
+import ListStudent from './components/Student/ListStudent'
+import Home from './components/Home'
 
 function App() {
   return (
@@ -31,23 +31,12 @@ function App() {
       <h2>Projeto CRUD</h2>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/create" element={<CreateStudent />} />
+        <Route path="/edit" element={<EditStudent />} />
+        <Route path="/list" element={<ListStudent />} />
       </Routes>
     </div>
   )
 }
-
-// class App extends Component{
-//   render(){
-//     return (
-//       <Router>
-//         <div className='container'>
-//           <h2>Projeto CRUD</h2>
-//         </div>
-//       </Router>
-//     )
-//   }
-// }
 
 export default App
