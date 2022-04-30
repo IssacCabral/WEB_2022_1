@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { Link } from "react-router-dom"
+import axios, { Axios, AxiosResponse, AxiosResponseHeaders } from "axios"
 
 const CreateStudent = () => {
     const [name, setName] = useState<string>('')
@@ -18,8 +19,15 @@ const CreateStudent = () => {
         setIra(event.target.value)
     }
 
-    function onSubmit(event: any){
+    async function onSubmit(event: any){
         event.preventDefault()
+
+        const newStudent = {name: name, course: course, ira: ira}
+
+        const result: any = await axios.post("http://localhost:3001/students", newStudent)
+
+        result ? console.log(result) : console.log(result.data.id)
+        
         setName('')
         setCourse('')
         setIra(0)

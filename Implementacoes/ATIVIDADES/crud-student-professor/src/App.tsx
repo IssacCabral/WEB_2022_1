@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Component } from 'react'
 import { Routes, Route, Link} from 'react-router-dom'
 import './App.css'
 
@@ -19,10 +18,10 @@ function App() {
               <Link to={'/'} className='nav-link'>Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to={'/create'} className='nav-link'>Create</Link>
+              <Link to={'/createStudent'} className='nav-link'>CreateStudent</Link>
             </li>
             <li className='nav-item'>
-              <Link to={'/list'} className='nav-link'>List</Link>
+              <Link to={'/listStudents'} className='nav-link'>ListStudents</Link>
             </li>
           </ul>
         </div>
@@ -31,9 +30,9 @@ function App() {
       <h2>Projeto CRUD</h2>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreateStudent />} />
-        <Route path="/edit" element={<EditStudent />} />
-        <Route path="/list" element={<ListStudent />} />
+        <Route path="/createStudent" element={<CreateStudent />} />
+        <Route path="/editStudent/:id" element={<EditStudent />} />
+        <Route path="/listStudents" element={<ListStudent />} />
       </Routes>
     </div>
   )

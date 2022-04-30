@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Jefferson",
+      "course": "Sistemas de Informação",
+      "ira": 8
+    },
+    {
+      "name": "Clidenor Issac de Almeida Cabral",
+      "course": "Sistemas de Informação",
+      "ira": "9.7",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Fulano",
+      "course": "Engenharia de computação",
+      "ira": 5.5
+    },
+    {
+      "name": "Matias Fernando",
+      "course": "SI",
+      "ira": "7.7",
+      "id": 4
+    },
+    {
+      "name": "Cicrano de Taql",
+      "course": "CC",
+      "ira": "5.9",
+      "id": 5
+    },
+    {
+      "name": "Fibrano de Nóia",
+      "course": "EC",
+      "ira": "10",
+      "id": 6
+    },
+    {
+      "name": "Lambanã",
+      "course": "SASASSA",
+      "ira": "4.6",
+      "id": 7
+    }
+  ]
+}
