@@ -42,5 +42,19 @@
       "ira": "4.6",
       "id": 7
     }
+  ],
+  "professors": [
+    {
+      "id": 1,
+      "name": "Aragão",
+      "university": "Universidade Federal do Ceará",
+      "degree": "Doutorado"
+    },
+    {
+      "name": "Matias Cabral",
+      "university": "UFC",
+      "degree": "Doutorado",
+      "id": 2
+    }
   ]
 }

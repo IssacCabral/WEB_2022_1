@@ -7,6 +7,8 @@ import EditStudent from './components/Student/EditStudent'
 import ListStudent from './components/Student/ListStudent'
 import Home from './components/Home'
 
+import CreateProfessor from './components/Professor/CreateProfessor'
+
 function App() {
   return (
     <div className="container">
@@ -23,6 +25,14 @@ function App() {
             <li className='nav-item'>
               <Link to={'/listStudents'} className='nav-link'>ListStudents</Link>
             </li>
+
+            <li className='nav-item'>
+              <Link to={'/createProfessor'} className='nav-link'>CreateProfessor</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to={'/listProfessors'} className='nav-link'>ListProfessors</Link>
+            </li>
+
           </ul>
         </div>
       </nav>
@@ -33,6 +43,7 @@ function App() {
         <Route path="/createStudent" element={<CreateStudent />} />
         <Route path="/editStudent/:id" element={<EditStudent />} />
         <Route path="/listStudents" element={<ListStudent />} />
+        <Route path="/createProfessor" element={<CreateProfessor />} />
       </Routes>
     </div>
   )
