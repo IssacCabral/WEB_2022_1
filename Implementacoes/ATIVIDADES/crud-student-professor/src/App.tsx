@@ -25,7 +25,7 @@ function App() {
               <Link to={'/createStudent'} className='nav-link'>CreateStudent</Link>
             </li>
             <li className='nav-item'>
-              <Link to={'/listStudents'} className='nav-link'>ListStudents</Link>
+              <Link to={'/crud/listStudents'} className='nav-link'>ListStudents</Link>
             </li>
 
             <li className='nav-item'>
@@ -42,12 +42,12 @@ function App() {
       <h2>Projeto CRUD</h2>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/createStudent" element={<CreateStudent />} />
-        <Route path="/editStudent/:id" element={<EditStudent />} />
-        <Route path="/listStudents" element={<ListStudent />} />
-        <Route path="/createProfessor" element={<CreateProfessor />} />
-        <Route path="/editProfessor/:id" element={<EditProfessor />} />
-        <Route path="/listProfessors" element={<ListProfessor />} />
+        <Route path="/crud/createStudent" element={<CreateStudent />} />
+        <Route path="/crud/editStudent/:id" element={<EditStudent />} />
+        <Route path="/crud/listStudents" element={<ListStudent />} />
+        <Route path="/crud/createProfessor" element={<CreateProfessor />} />
+        <Route path="/crud/editProfessor/:id" element={<EditProfessor />} />
+        <Route path="/crud/listProfessors" element={<ListProfessor />} />
       </Routes>
     </div>
   )

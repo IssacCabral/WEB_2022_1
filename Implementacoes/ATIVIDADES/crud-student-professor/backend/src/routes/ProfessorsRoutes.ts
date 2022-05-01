@@ -3,10 +3,10 @@ import { Router } from "express";
 
 const professorRouter = Router()
 
-professorRouter.get('/professors', ProfessorsController.findAll)
-professorRouter.post('/professors', ProfessorsController.create)
-professorRouter.get('/professors/:id', ProfessorsController.findByPk)
-professorRouter.delete('/professors/:id', ProfessorsController.destroy)
-professorRouter.put('/professors/:id', ProfessorsController.update)
+professorRouter.get('/crud/professors', ProfessorsController.findAll)
+professorRouter.post('/crud/professors', ProfessorsController.create)
+professorRouter.get('/crud/professors/:id', ProfessorsController.findByPk)
+professorRouter.delete('/crud/professors/:id', ProfessorsController.destroy)
+professorRouter.put('/crud/professors/:id', ProfessorsController.update)
 
 export default professorRouter
