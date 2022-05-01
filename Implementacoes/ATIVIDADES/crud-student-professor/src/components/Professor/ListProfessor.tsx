@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import StudentTableRow, {IStudent} from "./StudentTableRow";
+import ProfessorTableRow, {IProfessor} from "./ProfessorTableRow";
 
-const ListStudent = () => {
-    const [students, setStudents] = useState<IStudent[]>([])
-    
+const ListProfessor = () => {
+    const [professors, setProfessors] = useState<IProfessor[]>([]) 
+
     useEffect(
         () => {
-            axios.get("http://localhost:8080/students")
+            axios.get("http://localhost:3001/professors")
                 .then(
                     (res) => {
-                        setStudents(res.data)
+                        setProfessors(res.data)
                     }
                 )
                 .catch(
@@ -25,34 +25,34 @@ const ListStudent = () => {
         []
     )
 
-    function deleteStudentById(id: number){
-        let studentsTemp = students
-        for(let i = 0; i < studentsTemp.length; i++){
-            if(studentsTemp[i].id === id){
-                studentsTemp.splice(i, 1)
+    function deleteProfessorById(id: number){
+        let professorsTemp = professors
+        for(let i = 0; i < professorsTemp.length; i++){
+            if(professorsTemp[i].id === id){
+                professorsTemp.splice(i, 1)
             }
         }
-        setStudents([...studentsTemp])
+        setProfessors([...professorsTemp])
     }
 
     function generateTable(){
-        if(!students) return
-        return students.map((student, i) => {
-            return <StudentTableRow id={student.id} name={student.name} course={student.course} ira={student.ira} key={i} deleteStudentById={deleteStudentById} />
+        if(!professors) return
+        return professors.map((professor, i) => {
+            return <ProfessorTableRow id={professor.id} name={professor.name} university={professor.university} degree={professor.degree} key={i} deleteProfessorById={deleteProfessorById} />
         })
     }
 
     return (
         <div>
             <main>
-                <h2>List Student</h2>
+                <h2>List Professors</h2>
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            <th>Curso</th>
-                            <th>IRA</th>
+                            <th>Universidade</th>
+                            <th>Ocupação</th>
                             <th colSpan={2} style={{textAlign:"center"}}>Ações</th>
                         </tr>
                     </thead>
@@ -66,7 +66,6 @@ const ListStudent = () => {
             </nav>
         </div>
     )
-
 }
 
-export default ListStudent
+export default ListProfessor

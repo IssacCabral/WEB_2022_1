@@ -2,22 +2,21 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const EditStudent = () => {
-    const [name, setName] = useState<string>("")
-    const [course, setCourse] = useState<string>("")
-    const [ira, setIra] = useState<any>(0)
+const EditProfessor = () => {
+    const [name, setName] = useState<string>('')
+    const [university, setUniversity] = useState<string>('')
+    const [degree, setDegree] = useState<string>('')
     const params = useParams()
     const navigate = useNavigate()
 
     useEffect(
         () => {
-            //axios.get('http://localhost:3001/students/' + params.id)
-            axios.get('http://localhost:3001/students/' + params.id)
+            axios.get('http://localhost:3001/professors/' + params.id)
                 .then(
                     (res) => {
                         setName(res.data.name)
-                        setCourse(res.data.course)
-                        setIra(res.data.ira)
+                        setUniversity(res.data.university)
+                        setDegree(res.data.degree)
                     }
                 )
                 .catch(
@@ -33,15 +32,15 @@ const EditStudent = () => {
 
     const handleSubmit = (event: any) => {
         event.preventDefault()
-        const updatedStudent = {
+        const updatedProfessor = {
             name,
-            course,
-            ira
+            university,
+            degree
         }
-        axios.put('http://localhost:3001/students/' + params.id, updatedStudent)
+        axios.put('http://localhost:3001/professors/' + params.id, updatedProfessor)
             .then(
                 res => {
-                    navigate("/listStudents")
+                    navigate("/listProfessors")
                 }
             )
             .catch(error => console.log(error))
@@ -51,7 +50,7 @@ const EditStudent = () => {
         <>
             <main>
                 <h2>
-                    Editar Estudante
+                    Editar Professor
                 </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -63,23 +62,23 @@ const EditStudent = () => {
                             onChange={(event) => { setName(event.target.value) }} />
                     </div>
                     <div className="form-group">
-                        <label>Curso: </label>
+                        <label>Universidade: </label>
                         <input type="text"
                             className="form-control"
-                            value={course ?? ""}
-                            name="course"
-                            onChange={(event) => { setCourse(event.target.value) }} />
+                            value={university ?? ""}
+                            name="university"
+                            onChange={(event) => { setUniversity(event.target.value) }} />
                     </div>
                     <div className="form-group">
-                        <label>IRA: </label>
+                        <label>Ocupação: </label>
                         <input type="text"
                             className="form-control"
-                            value={ira ?? 0}
-                            name="ira"
-                            onChange={(event) => { setIra(event.target.value) }} />
+                            value={degree ?? 0}
+                            name="degree"
+                            onChange={(event) => { setDegree(event.target.value) }} />
                     </div>
                     <div className="form-group" style={{ paddingTop: 20 }}>
-                        <input type="submit" value="Atualizar Estudante" className="btn btn-primary" />
+                        <input type="submit" value="Atualizar Professor" className="btn btn-primary" />
                     </div>
                 </form>
             </main>
@@ -90,4 +89,4 @@ const EditStudent = () => {
     )
 }
 
-export default EditStudent
+export default EditProfessor

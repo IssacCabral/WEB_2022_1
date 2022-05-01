@@ -8,6 +8,8 @@ import ListStudent from './components/Student/ListStudent'
 import Home from './components/Home'
 
 import CreateProfessor from './components/Professor/CreateProfessor'
+import ListProfessor from './components/Professor/ListProfessor'
+import EditProfessor from './components/Professor/EditProfessor'
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
         <Route path="/editStudent/:id" element={<EditStudent />} />
         <Route path="/listStudents" element={<ListStudent />} />
         <Route path="/createProfessor" element={<CreateProfessor />} />
+        <Route path="/editProfessor/:id" element={<EditProfessor />} />
+        <Route path="/listProfessors" element={<ListProfessor />} />
       </Routes>
     </div>
   )

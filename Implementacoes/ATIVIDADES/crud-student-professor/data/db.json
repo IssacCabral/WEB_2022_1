@@ -45,15 +45,15 @@
   ],
   "professors": [
     {
-      "id": 1,
-      "name": "Aragão",
+      "name": "Aragão Matias",
       "university": "Universidade Federal do Ceará",
-      "degree": "Doutorado"
+      "degree": "Doutorado",
+      "id": 1
     },
     {
-      "name": "Matias Cabral",
-      "university": "UFC",
-      "degree": "Doutorado",
+      "name": "Matias Almeida Cabral ferreira de sousa",
+      "university": "UFC - Universidade Federal do Ceará",
+      "degree": "PDH",
       "id": 2
     }
   ]
