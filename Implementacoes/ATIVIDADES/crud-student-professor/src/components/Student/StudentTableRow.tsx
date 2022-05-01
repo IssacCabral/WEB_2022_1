@@ -14,7 +14,7 @@ const StudentTableRow = (student: IStudent) => {
 
     function deleteStudent(){
         if(window.confirm(`Deseja excluir o elemento de ID: ${id}`)){
-            axios.delete(`http://localhost:3001/students/${id}`)
+            axios.delete(`http://localhost:8080/crud/students/delete/${id}`)
             .then((response) => {student.deleteStudentById(id)})
             .catch(err => console.log(err))
         }
@@ -35,7 +35,7 @@ const StudentTableRow = (student: IStudent) => {
                     {ira}
                 </td>
                 <td>
-                    <Link to={`/editStudent/${id}`} className="btn btn-primary">Editar</Link>
+                    <Link to={`/crud/editStudent/${id}`} className="btn btn-primary">Editar</Link>
                 </td>
                 <td style={{textAlign: "center"}}>
                     <button className='btn btn-danger' onClick={deleteStudent}>Apagar</button>

@@ -24,7 +24,7 @@ const CreateStudent = () => {
 
         const newStudent = {name: name, course: course, ira: ira}
 
-        const result: any = await axios.post("http://localhost:3001/students", newStudent)
+        const result: any = await axios.post("http://localhost:8080/crud/students/create", newStudent)
 
         result ? console.log(result) : console.log(result.data.id)
         

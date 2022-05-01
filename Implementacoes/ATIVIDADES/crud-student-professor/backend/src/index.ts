@@ -4,6 +4,7 @@ import mainRouter from './routes/mainRouter'
 import cors from 'cors'
 
 import studentRouter from './routes/StudentsRoutes'
+import professorRouter from './routes/ProfessorsRoutes'
 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');

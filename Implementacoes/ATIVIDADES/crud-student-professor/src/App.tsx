@@ -22,7 +22,7 @@ function App() {
               <Link to={'/'} className='nav-link'>Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to={'/createStudent'} className='nav-link'>CreateStudent</Link>
+              <Link to={'/crud/createStudent'} className='nav-link'>CreateStudent</Link>
             </li>
             <li className='nav-item'>
               <Link to={'/crud/listStudents'} className='nav-link'>ListStudents</Link>

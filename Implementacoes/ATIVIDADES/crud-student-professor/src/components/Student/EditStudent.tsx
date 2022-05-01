@@ -11,8 +11,7 @@ const EditStudent = () => {
 
     useEffect(
         () => {
-            //axios.get('http://localhost:3001/students/' + params.id)
-            axios.get('http://localhost:3001/students/' + params.id)
+            axios.get('http://localhost:8080/crud/students/find/' + params.id)
                 .then(
                     (res) => {
                         setName(res.data.name)
@@ -38,10 +37,10 @@ const EditStudent = () => {
             course,
             ira
         }
-        axios.put('http://localhost:3001/students/' + params.id, updatedStudent)
+        axios.put('http://localhost:8080/crud/students/update/' + params.id, updatedStudent)
             .then(
                 res => {
-                    navigate("/listStudents")
+                    navigate("/crud/listStudents")
                 }
             )
             .catch(error => console.log(error))

@@ -9,11 +9,9 @@ const ListStudent = () => {
     
     useEffect(
         () => {
-            console.log('EAEAE')
-            axios.get("http://localhost:8080/crud/students/crud/listStudents")
+            axios.get("http://localhost:8080/crud/students/list")
                 .then(
                     (res) => {
-                        console.log("AQUI VAI EU OHHH", res)
                         setStudents(res.data)
                     }
                 )

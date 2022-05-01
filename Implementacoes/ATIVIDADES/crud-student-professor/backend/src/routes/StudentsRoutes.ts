@@ -3,11 +3,11 @@ import { Router } from "express";
 
 const studentRouter = Router()
 
-studentRouter.get('/crud/listStudents', StudentsController.findAll)
-studentRouter.post('/crud/createStudent', StudentsController.create)
-studentRouter.get('/crud/students/:id', StudentsController.findByPk)
-studentRouter.delete('/crud/students/:id', StudentsController.destroy)
-studentRouter.put('/crud/editStudent/:id', StudentsController.update)
+studentRouter.get('/list', StudentsController.findAll)
+studentRouter.post('/create', StudentsController.create)
+studentRouter.get('/find/:id', StudentsController.findByPk)
+studentRouter.delete('/delete/:id', StudentsController.destroy)
+studentRouter.put('/update/:id', StudentsController.update)
 
 
 export default studentRouter
