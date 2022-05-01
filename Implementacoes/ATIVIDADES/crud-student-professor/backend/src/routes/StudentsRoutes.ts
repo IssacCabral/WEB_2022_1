@@ -7,5 +7,7 @@ studentRouter.get('/students', StudentsController.findAll)
 studentRouter.post('/students', StudentsController.create)
 studentRouter.get('/students/:id', StudentsController.findByPk)
 studentRouter.delete('/students/:id', StudentsController.destroy)
+studentRouter.put('/students/:id', StudentsController.update)
+
 
 export default studentRouter

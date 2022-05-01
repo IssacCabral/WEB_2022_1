@@ -1,12 +1,12 @@
-import Student from "../models/Student";
+import Professor from '../models/Professor';
 import {Request, Response} from 'express'
-import StudentsService from "../services/StudentsService";
+import ProfessorsService from '../services/ProfessorsService'
 
 class StudentsController{
     async create(request: Request, response: Response){
-        const {name, course, ira} = request.body
+        const {name, university, degree} = request.body
 
-        const dataMandatory = ['name', 'course', 'ira']
+        const dataMandatory = ['name', 'university', 'degree']
 
         const errors: Array<any> = []
 
@@ -23,29 +23,29 @@ class StudentsController{
             return response.json({errors})
         }
 
-        const data = await StudentsService.create({name, course, ira})
+        const data = await ProfessorsService.create({name, university, degree})
 
         return response.status(200).json(data.data)
     }
 
     async findAll(request: Request, response: Response){
-        const students = await Student.findAll()
-        return response.status(200).json(students)
+        const professors = await Professor.findAll()
+        return response.status(200).json(professors)
     }
 
     async findByPk(request: Request, response: Response){
         const id = parseInt(request.params.id)
 
-        const data = await StudentsService.findByPk(id)
+        const data = await ProfessorsService.findByPk(id)
 
         return data["error"] ? response.status(404).json(data) : response.status(200).json(data.data)
     }
 
     async update(request: Request, response: Response){
         const id = parseInt(request.params.id)
-        const {name, course, ira} = request.body
+        const {name, university, degree} = request.body
 
-        const dataMandatory = ['name', 'course', 'ira']
+        const dataMandatory = ['name', 'university', 'degree']
 
         const errors: Array<any> = []
 
@@ -62,17 +62,17 @@ class StudentsController{
             return response.json({errors})
         }
 
-        const data = await StudentsService.findByPk(id)
+        const data = await ProfessorsService.findByPk(id)
 
         if(data['error']) return response.status(404).json(data)
 
-        const updateResult = await StudentsService.update(data.data, {name, course, ira})
+        const updateResult = await ProfessorsService.update(data.data, {name, university, degree})
         return response.status(200).json(updateResult)        
     }
 
     async destroy(request: Request, response: Response){
         const id: number = parseInt(request.params.id)
-        const data = await StudentsService.destroy(id)
+        const data = await ProfessorsService.destroy(id)
         return data["error"] ? response.status(400).json(data) : response.status(200).json(data.data)
     }
 }

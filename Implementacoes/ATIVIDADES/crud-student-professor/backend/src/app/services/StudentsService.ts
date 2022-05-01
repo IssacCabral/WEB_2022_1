@@ -15,6 +15,11 @@ class StudentsService{
         return {data: studentSearch}
     }
 
+    async update(student: any, {name, course, ira}: IStudentDTO){
+        await Student.update({name, course, ira}, {where: {id: student.id}})
+        return {data: 'Student atualizado'}
+    }
+
     async destroy(id: number){
         const studentSearch = await Student.findByPk(id)
         if(studentSearch === null) return {error: "Student não encontrado pelo id"}
@@ -23,4 +28,4 @@ class StudentsService{
     }
 }
 
-export default new StudentsService
+export default new StudentsService()
