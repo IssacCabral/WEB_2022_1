@@ -32,6 +32,7 @@ app.use(function (req, res, next) {
 
 //app.use('/api/v1/users', users);
 app.use('/crud/students',studentRouter)
+app.use('/crud/professors', professorRouter)
 
 app.listen(PORT, () => {
     console.log(`Server Listening on port ${PORT}`)

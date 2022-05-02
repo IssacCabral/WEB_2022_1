@@ -29,10 +29,10 @@ function App() {
             </li>
 
             <li className='nav-item'>
-              <Link to={'/createProfessor'} className='nav-link'>CreateProfessor</Link>
+              <Link to={'/crud/createProfessor'} className='nav-link'>CreateProfessor</Link>
             </li>
             <li className='nav-item'>
-              <Link to={'/listProfessors'} className='nav-link'>ListProfessors</Link>
+              <Link to={'/crud/listProfessors'} className='nav-link'>ListProfessors</Link>
             </li>
 
           </ul>

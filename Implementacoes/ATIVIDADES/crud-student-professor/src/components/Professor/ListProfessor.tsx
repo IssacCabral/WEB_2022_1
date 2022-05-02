@@ -9,7 +9,7 @@ const ListProfessor = () => {
 
     useEffect(
         () => {
-            axios.get("http://localhost:3001/professors")
+            axios.get("http://localhost:8080/crud/professors/list")
                 .then(
                     (res) => {
                         setProfessors(res.data)

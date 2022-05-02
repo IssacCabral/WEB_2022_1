@@ -23,7 +23,7 @@ const CreateProfessor = () => {
 
         const newProfessor = {name, university, degree}
 
-        const result: any = await axios.post("http://localhost:3001/professors", newProfessor)
+        const result: any = await axios.post("http://localhost:8080/crud/professors/create", newProfessor)
 
         result ? console.log(result) : console.log(result.data.id)
 
