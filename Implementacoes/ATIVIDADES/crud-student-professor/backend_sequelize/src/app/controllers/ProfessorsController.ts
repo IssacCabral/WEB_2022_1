@@ -32,7 +32,7 @@ class StudentsController{
         const professors = await Professor.findAll()
         return response.status(200).json(professors)
     }
-
+   
     async findByPk(request: Request, response: Response){
         const id = parseInt(request.params.id)
 
