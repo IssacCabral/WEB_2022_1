@@ -21,7 +21,7 @@
 
 <h2>📚 Repositório destinado à disciplina de Desenvolvimento de Software para WEB </h2>
 
-<h2>📁 Dentro de cada pasta tem o Readme explicando sobre o que foi feito </h2>
+<h2>📁 Dentro de cada task tem o Readme explicando sobre o que foi feito </h2>
 
 <h2>💻 Pré-requisitos </h2>
 <ul>
