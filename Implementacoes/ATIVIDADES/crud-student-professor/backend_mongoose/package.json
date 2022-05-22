@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "mongo_con": "ts-node-dev --respawn --transpile-only src/config/MongoConn.ts",
+    "mongo_conn": "ts-node-dev --respawn --transpile-only src/config/MongoConn.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
