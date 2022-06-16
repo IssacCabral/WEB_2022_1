@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "name": "Jefferson de Carvalho Silva",
+      "course": "Sistemas de Informação",
+      "ira": 6.7,
+      "id": 0
+    },
+    {
+      "id": 1,
+      "name": "Fulano de Tal",
+      "course": "Sistemas de Informação",
+      "ira": 4.5
+    },
+    {
+      "name": "Sicrano de Tal da Silva",
+      "course": "Sistemas de Informação",
+      "ira": 9,
+      "id": 2
+    },
+    {
+      "name": "Victor feio da costa",
+      "course": "EC",
+      "ira": "6",
+      "id": 4
+    }
+  ],
+  "professors": [
+    {
+      "name": "Fábio Campos",
+      "university": "UFC Quixadá do Brasil",
+      "degree": "Pós Doutor",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "André",
+      "university": "UFC Quixadá",
+      "degree": "Doutorado"
+    }
+  ]
+}
